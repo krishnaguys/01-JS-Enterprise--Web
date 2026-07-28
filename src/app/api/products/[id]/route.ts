@@ -1,17 +1,28 @@
 import { products } from "@/data/products";
+import { NextResponse } from "next/server";
+
+interface RouteContext {
+  params: Promise<{
+    id: string;
+  }>;
+}
 
 export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
+  _request: Request,
+  { params }: RouteContext
 ) {
-  const product = products.find((p) => p.id === params.id);
+  const { id } = await params;
+
+  const product = products.find(
+    (item) => String(item.id) === id
+  );
 
   if (!product) {
-    return Response.json(
+    return NextResponse.json(
       { error: "Product not found" },
       { status: 404 }
     );
   }
 
-  return Response.json(product);
+  return NextResponse.json(product);
 }
