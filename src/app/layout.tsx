@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Providers from "@/components/common/Providers";
 
+import Providers from "@/components/common/Providers";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
@@ -40,32 +40,34 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-   <html
-  lang="en"
-  className={`${outfit.variable}`}
-  suppressHydrationWarning
->
+    <html
+      lang="en"
+      className={outfit.variable}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="color-scheme" content="light dark" />
       </head>
 
-    <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
-  <Providers>
-    <Header />
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <Providers>
+          <Header />
 
-    <main className="flex-grow pt-20">
-      {children}
-    </main>
+          
 
-    <Footer />
-    <WhatsAppButton />
-    <EnquiryModal />
-  </Providers>
-</body>
+          <main className="flex-grow pt-20">
+            {children}
+          </main>
+
+          <Footer />
+          <WhatsAppButton />
+          <EnquiryModal />
+        </Providers>
+      </body>
     </html>
   );
 }

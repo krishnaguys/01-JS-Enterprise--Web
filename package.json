@@ -13,12 +13,10 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.10",
     "embla-carousel": "^8.0.0",
     "embla-carousel-autoplay": "^8.0.0",
     "embla-carousel-react": "^8.0.0",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.294.0",
     "next": "^15.0.0",
     "next-themes": "^0.2.1",
@@ -30,6 +28,8 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",

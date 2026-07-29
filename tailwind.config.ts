@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -16,30 +18,28 @@ const config: Config = {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
 
-  colors: {
-  background: "rgb(var(--background) / <alpha-value>)",
-  foreground: "rgb(var(--foreground) / <alpha-value>)",
+      colors: {
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
 
-  primary: "rgb(var(--primary) / <alpha-value>)",
-  accent: "rgb(var(--accent) / <alpha-value>)",
+        primary: "rgb(var(--primary) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
 
-  "card-bg": "rgb(var(--card-bg) / <alpha-value>)",
-  "card-border": "rgb(var(--card-border) / <alpha-value>)",
+        "card-bg": "rgb(var(--card-bg) / <alpha-value>)",
+        "card-border": "rgb(var(--card-border) / <alpha-value>)",
 
-  "text-muted": "rgb(var(--text-muted) / <alpha-value>)",
-  "bg-subtle": "rgb(var(--bg-subtle) / <alpha-value>)",
-},
-      animation: {
-        fadeIn: "fadeIn 0.6s ease-in",
-        slideUp: "slideUp 0.6s ease-out",
-        slideDown: "slideDown 0.3s ease-out",
-        pulse: "pulse 2s cubic-bezier(0.4,0,0.6,1) infinite",
+        "text-muted": "rgb(var(--text-muted) / <alpha-value>)",
+        "bg-subtle": "rgb(var(--bg-subtle) / <alpha-value>)",
       },
 
       keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+        marquee: {
+          "0%": {
+            transform: "translateX(100%)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
         },
 
         slideUp: {
@@ -65,6 +65,12 @@ const config: Config = {
         },
       },
 
+      animation: {
+        marquee: "marquee 20s linear infinite",
+        slideUp: "slideUp 0.6s ease-out",
+        slideDown: "slideDown 0.6s ease-out",
+      },
+
       spacing: {
         "128": "32rem",
         "144": "36rem",
@@ -82,10 +88,7 @@ const config: Config = {
     },
   },
 
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [forms, typography],
 };
 
 export default config;

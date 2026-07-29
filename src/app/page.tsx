@@ -3,6 +3,58 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { triggerEnquiry } from "@/components/EnquiryModal";
+import Hero from "@/components/home/Hero";
+import AnnouncementBar from "@/components/AnnouncementBar";
+
+{/* STATS */}
+
+<section className="bg-[#D71920] text-white">
+
+  <div className="max-w-7xl mx-auto">
+
+    <div className="grid grid-cols-2 md:grid-cols-4">
+
+      <div className="py-10 text-center border-b md:border-b-0 md:border-r border-white/20">
+        <h3 className="text-4xl md:text-5xl font-extrabold">
+          500+
+        </h3>
+        <p className="mt-2 text-white/90 font-medium">
+          Happy Clients
+        </p>
+      </div>
+
+      <div className="py-10 text-center border-b md:border-b-0 md:border-r border-white/20">
+        <h3 className="text-4xl md:text-5xl font-extrabold">
+          1000+
+        </h3>
+        <p className="mt-2 text-white/90 font-medium">
+          Uniform Designs
+        </p>
+      </div>
+
+      <div className="py-10 text-center border-r border-white/20">
+        <h3 className="text-4xl md:text-5xl font-extrabold">
+          25+
+        </h3>
+        <p className="mt-2 text-white/90 font-medium">
+          Industries Served
+        </p>
+      </div>
+
+      <div className="py-10 text-center">
+        <h3 className="text-4xl md:text-5xl font-extrabold">
+          PAN India
+        </h3>
+        <p className="mt-2 text-white/90 font-medium">
+          Delivery Network
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 const categories = [
   {
@@ -41,180 +93,7 @@ export default function HomePage() {
   return (
     <main className="bg-background text-foreground">
 
-      {/* HERO */}
-      <section className="bg-gradient-to-br from-bg-subtle to-background">
-
-        <div className="max-w-7xl mx-auto px-6 py-24">
-
-          <span className="
-            bg-accent 
-            text-white
-            px-4 
-            py-2 
-            rounded-full 
-            text-sm 
-            font-semibold
-          ">
-            Since 2018
-          </span>
-
-
-          <h1 className="
-            mt-8
-            text-5xl
-            md:text-7xl
-            font-extrabold
-            leading-tight
-            text-foreground
-          ">
-            Premium Industrial Uniforms
-            <br />
-            & Safety Solutions
-          </h1>
-
-
-          <p className="
-            mt-6
-            max-w-2xl
-            text-lg
-            text-text-muted
-          ">
-            JC Enterprises manufactures premium corporate uniforms,
-            industrial uniforms, PPE equipment, safety shoes,
-            housekeeping products and customized apparel for businesses
-            across India.
-          </p>
-
-
-          <div className="mt-10 flex flex-wrap gap-4">
-
-            <button
-              onClick={() => triggerEnquiry({})}
-              className="
-                bg-accent
-                hover:opacity-90
-                text-white
-                px-6
-                py-3
-                rounded-lg
-                font-semibold
-                transition
-              "
-            >
-              Request Quote
-            </button>
-
-
-            <Link
-              href="/products"
-              className="
-                border
-                border-card-border
-                text-foreground
-                px-6
-                py-3
-                rounded-lg
-                hover:bg-bg-subtle
-                transition
-              "
-            >
-              View Products
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      {/* ABOUT */}
-
-      <section className="py-20 bg-background">
-
-        <div className="max-w-6xl mx-auto px-6 text-center">
-
-
-          <h2 className="
-            text-4xl
-            font-bold
-            text-foreground
-          ">
-            Why Choose JC Enterprises?
-          </h2>
-
-
-          <p className="
-            mt-6
-            text-text-muted
-            max-w-3xl
-            mx-auto
-          ">
-            We provide durable, comfortable and customized industrial
-            uniforms and safety products designed for factories,
-            corporate offices, hospitals, hotels and institutions.
-          </p>
-
-
-
-          <div className="
-            grid
-            md:grid-cols-3
-            gap-8
-            mt-16
-          ">
-
-            {[
-              "Premium Quality Fabrics",
-              "Customized Branding",
-              "Bulk Order Manufacturing",
-              "Affordable Pricing",
-              "Pan India Delivery",
-              "Fast Turnaround",
-            ].map((item) => (
-
-              <div
-                key={item}
-                className="
-                  bg-card-bg
-                  border
-                  border-card-border
-                  rounded-xl
-                  p-6
-                  shadow-sm
-                "
-              >
-
-                <CheckCircle
-                  className="
-                    mx-auto
-                    text-accent
-                    mb-4
-                  "
-                />
-
-
-                <h3 className="
-                  font-semibold
-                  text-foreground
-                ">
-                  {item}
-                </h3>
-
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
+<Hero/>
 
       {/* PRODUCTS */}
 
@@ -325,84 +204,6 @@ export default function HomePage() {
         </div>
 
       </section>
-
-
-
-
-
-      {/* STATS */}
-
-      <section className="
-        py-20
-        bg-accent
-        text-white
-      ">
-
-
-        <div className="
-          max-w-6xl
-          mx-auto
-          px-6
-        ">
-
-
-          <div className="
-            grid
-            grid-cols-2
-            md:grid-cols-4
-            gap-8
-            text-center
-          ">
-
-
-            <div>
-              <h3 className="text-5xl font-bold">
-                2018
-              </h3>
-              <p>
-                Established
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-5xl font-bold">
-                14+
-              </h3>
-              <p>
-                Product Categories
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-5xl font-bold">
-                100+
-              </h3>
-              <p>
-                Business Clients
-              </p>
-            </div>
-
-
-            <div>
-              <h3 className="text-5xl font-bold">
-                100%
-              </h3>
-              <p>
-                Quality Focus
-              </p>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
 
 
       {/* CTA */}
