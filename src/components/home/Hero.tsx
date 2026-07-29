@@ -5,10 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  ShieldCheck,
   Factory,
   Truck,
-  BadgeCheck,
+  ShieldCheck,
 } from "lucide-react";
 
 export default function Hero() {

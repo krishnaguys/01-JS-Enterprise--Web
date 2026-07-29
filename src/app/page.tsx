@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { triggerEnquiry } from "@/components/EnquiryModal";
 import Hero from "@/components/home/Hero";
-import AnnouncementBar from "@/components/AnnouncementBar";
+
 
 {/* STATS */}
 
